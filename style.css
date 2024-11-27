@@ -1,0 +1,274 @@
+@import
+url('https://fonts.googleapis.com/css?family=Bungee');
+
+
+:root {
+    --light: #f8f9fa;
+    --dark: #212529;
+    --primary: #0d6efd;
+  }
+  
+  
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  
+  .navbar {
+    transition: 0.3s ease;
+  }
+  
+  .navbar.scrolled .nav-link.active {
+    display: inline-block;
+    background: linear-gradient(to right, red, rgb(182, 0, 182), rgb(60, 60, 255));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  .navbar.scrolled {
+    background: var(--light);
+    box-shadow: 0 1px 15px rgba(255, 255, 255, 0.75);
+
+    li a {
+        display: inline-block;
+        background: linear-gradient(to right, rgb(165, 110, 47), rgb(167, 144, 144));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+  }
+  
+  
+  .navbar.scrolled .navbar-brand {
+    display: inline-block;
+    background: linear-gradient(to right, rgb(165, 110, 47), rgb(167, 144, 144));
+    background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .navbar {
+        background: var(--dark);
+        box-shadow: 0 1px 15px rgba(255, 255, 255, 0.75);  
+    }
+    .navbar .navbar-brand {
+        display: inline-block;
+        background-clip: text;
+        font-weight: bold;
+        -webkit-text-fill-color: transparent;
+    }
+  }
+  
+  
+  #offcanvas {
+    background: var(--dark);
+  }
+  
+  
+  .offcanvas button {
+    background: none;
+    border: none;
+  }
+  
+  
+  header.masthead {
+    background: linear-gradient(270deg, rgb(136, 66, 0), #e9ae6a);
+    padding-top: 10rem;
+    padding-bottom: 5.5rem;
+  }
+  
+  
+  header.masthead .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  header.masthead hr {
+    width: 3rem;
+    height: 4px;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    opacity: 1;
+  }
+  
+  
+  @media (min-width: 768px) {
+    header.masthead {
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    header.masthead p {
+        font-size: 1.2rem;
+    }
+    header.masthead h1 {
+        font-size: 3rem;
+        overflow: hidden;
+        z-index: 1;
+    }
+  }
+  @media (min-width: 1200px) {
+    header.masthead h1 {
+        font-size: 3.5rem;
+    }
+  }
+  
+  
+  header.masthead a {
+    width: auto;
+  }
+  
+  #bline {
+    height: 2vh;
+  }
+
+  #learn {
+    height: 100vh;
+    background: linear-gradient(270deg, rgb(136, 66, 0), #f0e06da4);
+  }
+
+  .abouttext {
+    font-size: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  #askButton {
+    margin-top: 100px;
+    font: bolder;
+    font-family: 'bungee';
+    font-size: 30px;
+  }
+
+  #output {
+    font-size: 25px;
+    margin-top: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+
+
+  #header {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background: linear-gradient(to right, #af7a17, #c4a05d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+header .set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+header .set div {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+}
+
+header .set div:nth-child(1) {
+    left: 20%;
+    animation: animate 15s linear infinite;
+    animation-delay: -7%;
+}
+
+header .set div:nth-child(2) {
+    left: 50%;
+    animation: animate 20s linear infinite;
+    animation-delay: -5%;
+}
+
+header .set div:nth-child(3) {
+    left: 70%;
+    animation: animate 20s linear infinite;
+    animation-delay: 0%;
+}
+
+header .set div:nth-child(4) {
+    left: 0%;
+    animation: animate 15s linear infinite;
+    animation-delay: 0%;
+}
+
+header .set div:nth-child(5) {
+    left: 85%;
+    animation: animate 18s linear infinite;
+    animation-delay: -10%;
+}
+
+header .set div:nth-child(6) {
+    left: 0%;
+    animation: animate 12s linear infinite;
+}
+
+header .set div:nth-child(7) {
+    left: 15%;
+    animation: animate 14s linear infinite;
+}
+
+header .set div:nth-child(8) {
+    left: 60%;
+    animation: animate 15s linear infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(-20px) rotate(0deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+
+    40% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+
+    60% {
+        transform: translateX(-20px) rotate(180deg);
+    }
+
+    80% {
+        transform: translateX(-20px) rotate(180deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
+
+
+.turkeyimage {
+  height: 500px;
+  position: relative;
+  top: 150px;
+}
